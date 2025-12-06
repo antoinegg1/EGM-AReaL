@@ -4,7 +4,7 @@ This repository releases the official [AReaL](https://github.com/inclusionAI/ARe
 
 ## RL Training
 
-We provide the Grounding training and inference workflow for the **EGM-8B** model as the primary example below. Since AReaL adopts a decoupled loss loss to improve asynchronous training performance, the training hyperparameters in this repo are slightly different from those described in the paper.
+We provide the Grounding training and inference workflow for the **EGM-8B** model as the primary example below. Since AReaL adopts a decoupled loss to improve asynchronous training performance, the training hyperparameters in this repo are slightly different from those described in the paper.
 
 ### 1. Installation
 
