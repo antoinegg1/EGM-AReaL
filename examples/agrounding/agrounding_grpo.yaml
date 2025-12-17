@@ -10,7 +10,7 @@ cluster:
   n_gpus_per_node: 8
   fileroot: /tmp/areal/experiments
   name_resolve:
-    type: ray
+    type: nfs
     nfs_record_root: /tmp/areal/name_resolve
 
 allocation_mode: sglang:d4p1t1+d4p1t1
