@@ -82,10 +82,12 @@ To evaluate the model, you can use the command provided below.
 **Note:** The RefCOCO benchmark consists of eight distinct JSON files. Consequently, you must run the evaluation script sequentially for each of the 8 files to obtain the complete benchmark results.
 
 ```bash
-export MODEL_PATH=${YOUR_MODEL_PATH}
-export DATA_JSON=${DATA_JSON}
-export OUTPUT_DIR=${YOUR_OUTPUT_DIR}
-export BASE_IMG_PATH=${YOUR_BASE_IMG_PATH}
+# In the EGM-AReaL folder
+export BASE_DIR=$(pwd)
+export MODEL_PATH="${BASE_DIR}/models/EGM-8B"
+export DATA_JSON="${BASE_DIR}/data/EGM_Datasets/metadata/eval/refcoco+_testA.jsonl"
+export OUTPUT_DIR="${BASE_DIR}/result/"
+export BASE_IMG_DIR="${BASE_DIR}"
 
 bash examples/agrounding/evaluation/sglang_infer.sh
 ```
@@ -93,10 +95,12 @@ bash examples/agrounding/evaluation/sglang_infer.sh
 We also support evaluation with vLLM:
 
 ```bash
-export MODEL_PATH=${YOUR_MODEL_PATH}
-export DATA_JSON=${DATA_JSON}
-export OUTPUT_DIR=${YOUR_OUTPUT_DIR}
-export BASE_IMG_PATH=${YOUR_BASE_IMG_PATH}
+# In the EGM-AReaL folder
+export BASE_DIR=$(pwd)  
+export MODEL_PATH="${BASE_DIR}/models/EGM-8B"
+export DATA_JSON="${BASE_DIR}/data/EGM_Datasets/metadata/eval/refcoco+_testA.jsonl"
+export OUTPUT_DIR="${BASE_DIR}/result/"
+export BASE_IMG_DIR="${BASE_DIR}"
 
 bash examples/agrounding/evaluation/vllm_infer.sh
 ```
