@@ -57,7 +57,7 @@ conda activate EGM
 
 cd AReaL
 pip install uv
-uv pip install -e .[all]
+uv pip install --system -e '.[all]'
 ```
 
 
@@ -136,9 +136,6 @@ Below we use **EGM-8B** as the main example to illustrate the Grounding training
 We provide the necessary training and validation sets in Parquet format for EGM-Qwen3-VL-8B-v1. Please use the following code to replace the relative image paths within the Parquet files:
 
 ```bash
-cd ../../
-# now at the `EGM-AReaL` folder 
-
 export BASE_DIR=$(pwd)
 
 # prepare the train data
