@@ -67,6 +67,7 @@ You can directly download our model and test datasets for evaluation with the co
 
 ```bash
 # Models
+pip install -U huggingface_hub
 hf download JamesZGQ/EGM-8B --local-dir ./models/EGM-8B
 hf download JamesZGQ/EGM-4B --local-dir ./models/EGM-4B
 
