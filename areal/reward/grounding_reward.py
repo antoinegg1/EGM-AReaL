@@ -207,22 +207,22 @@ def compute_score(
         reward = 1.0 if iou_val >= iou_threshold else 0.0
     else:
         raise ValueError("Unknown reward_type. Use 'mix', 'sigmoid', or 'raw'.")
-    if random.random() < 0.001:
-        case = {
-            "split": split,
-            "reward_type": reward_type,
-            "alpha": alpha,
-            "threshold": iou_threshold,
-            "image_size": {"w": w, "h": h},
-            "solution_str": completions,
-            "pb": list(pb),
-            "ground_truth": list(gt_box_raw),
-            "pred_box": list(pred_box),
-            "gt_box": list(gt_box),
-            "iou": iou_val,
-            "reward": reward,
-        }
-        print("[CASE]", json.dumps(case, ensure_ascii=False))
+    # if random.random() < 0.001:
+    #     case = {
+    #         "split": split,
+    #         "reward_type": reward_type,
+    #         "alpha": alpha,
+    #         "threshold": iou_threshold,
+    #         "image_size": {"w": w, "h": h},
+    #         "solution_str": completions,
+    #         "pb": list(pb),
+    #         "ground_truth": list(gt_box_raw),
+    #         "pred_box": list(pred_box),
+    #         "gt_box": list(gt_box),
+    #         "iou": iou_val,
+    #         "reward": reward,
+    #     }
+    #     print("[CASE]", json.dumps(case, ensure_ascii=False))
 
     return reward
 
