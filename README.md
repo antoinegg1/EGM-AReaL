@@ -55,7 +55,7 @@ git clone https://github.com/antoinegg1/EGM-AReaL
 conda create -n EGM python=3.12
 conda activate EGM
 
-cd AReaL
+cd EGM-AReaL
 pip install uv
 uv pip install --system -e '.[all]'
 ```
