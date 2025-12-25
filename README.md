@@ -153,7 +153,7 @@ python ./examples/agrounding/data_preprocess/replace_img_dir.py \
 Alternatively, you may construct the datasets manually using `examples/agrounding/data_preprocess/grounding_val.sh` and`examples/agrounding/data_preprocess/grounding_all.sh`.
 
 
-
+Training the finetuned model with the following command; the checkpoints and logs are saved in `/tmp/areal/experiments/`. 
 ```bash
 export WANDB_BASE_URL=${YOUR_WANDB_BASE_URL}   
 export WANDB_API_KEY=${YOUR_WANDB_API_KEY} 
